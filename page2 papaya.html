@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutri Papaya Chips - M3P Recipes</title>
+    <style>
+        :root {
+            --primary-orange: #f39c12;
+            --dark-green: #27ae60;
+            --light-bg: #fdfaf5;
+            --text-color: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .recipe-card {
+            background: white;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            border: 4px solid var(--dark-green);
+        }
+
+        .header {
+            background: var(--dark-green);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 { margin: 0; font-size: 2.5rem; letter-spacing: 2px; }
+        .header p { margin: 5px 0 0; opacity: 0.9; font-style: italic; }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-around;
+            background: #f1f1f1;
+            padding: 15px;
+            font-weight: bold;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .content-section { padding: 30px; }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            border: none;
+            background: #eee;
+            cursor: pointer;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary-orange);
+            color: white;
+        }
+
+        .tab-content { display: none; line-height: 1.6; }
+        .tab-content.active { display: block; }
+
+        ul, ol { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        .nutrition-box {
+            background: #fff;
+            border: 2px solid #000;
+            padding: 15px;
+            max-width: 300px;
+            margin-top: 20px;
+        }
+
+        .footer {
+            background: #f9f9f9;
+            padding: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+
+        .price-tag {
+            color: var(--primary-orange);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="recipe-card">
+    <div class="header">
+        <h1>NUTRI PAPAYA CHIPS</h1>
+        <p>Masarap, Mura, Masustansyang Pagkain</p>
+    </div>
+
+    <div class="stats-bar">
+        <span>⏱ Prep: 1 Hour</span>
+        <span>🍳 Cook: 30 Mins</span>
+        <span>📦 Yield: 20</span>
+        <span class="price-tag">₱35.00</span>
+    </div>
+
+    <div class="content-section">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'Ingredients')">Ingredients</button>
+            <button class="tab-btn" onclick="openTab(event, 'Procedures')">Procedures</button>
+            <button class="tab-btn" onclick="openTab(event, 'Nutrition')">Nutrition</button>
+        </div>
+
+        <div id="Ingredients" class="tab-content active">
+            <h3>What You'll Need:</h3>
+            <ul>
+                <li>1pc Unripe, Nearly Ripe, and Ripe Papaya</li>
+                <li>1 Cup Flour & 1 tbsp + 1/2 tsp Cornstarch</li>
+                <li>2 Tbsp Crispy Fry Mix</li>
+                <li>400ml Oil (for frying)</li>
+                <li>1/4 tsp Pepper</li>
+                <li>1 tbsp Sour Cream Flavoring</li>
+            </ul>
+        </div>
+
+        <div id="Procedures" class="tab-content">
+            <h3>Step-by-Step Guide:</h3>
+            <ol>
+                <li><strong>Prep:</strong> Wash, clean, and slice papayas into thin pieces.</li>
+                <li><strong>Dry:</strong> Sun-dry the slices to reduce moisture.</li>
+                <li><strong>Batter:</strong> Mix flour, crispy fry mix, cornstarch, salt, and pepper in a bowl.</li>
+                <li><strong>Fry:</strong> Coat slices in mixture and fry in hot oil until golden brown.</li>
+                <li><strong>Flavor:</strong> Let chips rest, then shake with sour cream powder in a container.</li>
+                <li><strong>Finish:</strong> Package and serve!</li>
+            </ol>
+        </div>
+
+        <div id="Nutrition" class="tab-content">
+            <div class="nutrition-box">
+                <h2 style="margin-top:0">Nutrition Facts</h2>
+                <hr>
+                <p><strong>Serving Size:</strong> 40g</p>
+                <p><strong>Calories:</strong> 258</p>
+                <hr>
+                <p>Total Fat: 21.3g</p>
+                <p>Total Carbohydrate: 15.5g</p>
+                <p>Protein: 3.7g</p>
+                <p>Calcium: 137mg</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>Proponents:</strong> Faustino, Cabuco, Reyes, Nocon, Gonzales, & Enriquez</p>
+        <p>Cavite National High School - S.Y. 2025-2026</p>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tab-btn");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+</script>
+
+</body>
+</html>

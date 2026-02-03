@@ -1,0 +1,479 @@
+<link rel="icon" href="53431d80-6009-441e-99a7-44fd74c3c118.jpg">
+<style>/* Modern Hero Styles */
+.hero-section {
+    position: relative;
+    min-height: 85vh;
+    background-color: #fffdec; /* Cream base */
+    overflow: hidden;
+    padding: 0 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* The Lime "Wave" Background */
+.hero-section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #e1ff5f; /* Lime Green */
+    border-bottom-left-radius: 50% 100%;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    z-index: 10;
+}
+
+.logo { font-weight: 900; font-size: 1.5rem; letter-spacing: -1px; }
+.logo span { color: #888; }
+
+.nav-links { list-style: none; display: flex; gap: 30px; }
+.nav-links a { text-decoration: none; color: #333; font-size: 0.9rem; font-weight: 500; }
+
+.contact-btn {
+    background: #111;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+    flex-grow: 1;
+    z-index: 5;
+    position: relative;
+}
+
+.category-tag { color: #ff6b6b; font-weight: bold; font-size: 0.8rem; margin-bottom: 20px; display: block; }
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    color: #111;
+}
+
+.hero-text p {
+    max-width: 400px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Search Bar */
+.search-bar {
+    background: white;
+    padding: 5px;
+    border-radius: 50px;
+    display: flex;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.search-bar input {
+    border: none;
+    padding: 15px 25px;
+    flex-grow: 1;
+    border-radius: 50px;
+    outline: none;
+}
+
+.search-bar button {
+    background: #111;
+    color: white;
+    border: none;
+    padding: 0 30px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Image Section */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.main-dish {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 15px solid white;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.partners-bar {
+    background: white;
+    padding: 40px 5%;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    border-radius: 30px 30px 0 0;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+}
+
+.partners-bar p { font-weight: bold; white-space: nowrap; }
+.logos { display: flex; justify-content: space-around; width: 100%; opacity: 0.6; font-weight: 900; }
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero-container { grid-template-columns: 1fr; text-align: center; }
+    .hero-section::after { display: none; }
+    .hero-text h1 { font-size: 3rem; }
+    .search-bar { margin: 0 auto; }
+}
+</style>
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+    const heroContent = document.querySelector('.hero-text');
+    const heroImage = document.querySelector('.main-dish');
+
+    // Simple fade-in effect
+    heroContent.style.opacity = '0';
+    heroContent.style.transform = 'translateX(-50px)';
+    heroImage.style.opacity = '0';
+    heroImage.style.transform = 'scale(0.😎';
+
+    setTimeout(() => {
+        heroContent.style.transition = 'all 1s ease-out';
+        heroContent.style.opacity = '1';
+        heroContent.style.transform = 'translateX(0)';
+        
+        heroImage.style.transition = 'all 1s ease-out 0.3s';
+        heroImage.style.opacity = '1';
+        heroImage.style.transform = 'scale(1)';
+    }, 100);
+});
+</script>
+
+<section class="hero-section">
+    <div class="shape-blob"></div>
+    
+    <nav class="navbar">
+        <div class="logo">FOOD.<span>INNO</span></div>
+        <ul class="nav-links">
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Recipes</a></li>
+            <li><a href="#">About Us</a></li>
+        </ul>
+     <a href="pageofinfo.html">
+        <button class="contact-btn">CONTACT US</button>
+    </a>
+    </nav>
+
+    <div class="hero-container">
+        <div class="hero-text">
+            <span class="category-tag">WEB WITH RECIPES</span>
+            <h1>GOOD 😋 TASTE.<br>GOOD 🤔 SENSE.</h1>
+            <p>Explore our 2026 collection of food innovations. From CSS 12-A and H.E recipes, we bring creativity to your kitchen.</p>
+            
+            <div class="search-bar">
+                <input type="text" placeholder="Search for recipes...">
+            
+                  <button>SEARCH</button>
+        
+               </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="intro pic.jpg" alt="Featured Food" class="main-dish">
+            <div class="floating-elements">
+                <span class="leaf l1">🍃</span>
+                <span class="leaf l2">🌿</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="partners-bar">
+    <p>Our Partners</p>
+    <div class="logos">
+        <span>WEELICIOUS</span>
+        <span>SELF</span>
+        <span>FOOD.CO</span>
+        <span>FOOD CITY</span>
+    </div>
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Collection - Food Innovation</title>
+    <style>
+        :root {
+            --primary-yellow: #f9d867;
+            --accent-orange: #d17a2d;
+            --bg-cream: #fff9e6;
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        header {
+            background-color: var(--primary-yellow);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 5px solid #eee1b3;
+            background-image: radial-gradient(circle at top right, rgba(255,255,255,0.3), transparent);
+        }
+
+        .hero-title {
+            font-size: 3rem;
+            margin: 0;
+            color: #4a3b00;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+
+        /* Recipe Grid */
+        .container {
+            max-width: 1100px;
+            margin: -40px auto 50px auto;
+            padding: 20px;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .recipe-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-img {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            background-color: #f0f0f0;
+        }
+
+        .card-content {
+            padding: 25px;
+            flex-grow: 1;
+        }
+
+        .card-tag {
+            background: var(--primary-yellow);
+            font-size: 0.7rem;
+            padding: 5px 12px;
+            border-radius: 50px;
+            font-weight: bold;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin: 0 0 15px 0;
+            line-height: 1.2;
+        }
+
+        .card-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            background-color: var(--accent-orange);
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.3s;
+        }
+
+        /* MODAL STYLES */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            max-height: 80vh;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            color: #999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="hero-title">RECIPE COLLECTION</h1>
+        <p class="hero-subtitle">Masarap, Mura, Foodtrip na! - Food Innovation 2026</p>
+    </header>
+
+    <div class="container">
+        <div class="recipe-grid">
+            
+            <div class="recipe-card">
+                <div class="card-img" style="background-image: url('papaya chips.jpg');"></div>
+                <div class="card-content">
+                    <span class="card-tag">HEALTHY ALTERNATIVE</span>
+                    <h3 class="card-title">Nutri Papaya Chips</h3>
+                 
+                    <p class="card-description">A nutrient-dense, crispy alternative to traditional snacks using unripe to ripe papaya.</p>
+                 
+                <a href="page2 papaya.html">
+                    <button class="btn" onclick="openRecipe('papaya')">View Recipe</button>
+               </a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img" style="background-image: url('hopia.jpg');"></div>
+                <div class="card-content">
+                    <span class="card-tag">UPCYCLED INGREDIENTS</span>
+                    <h3 class="card-title">Jackfruit Seed Hopia</h3>
+                    <p class="card-description">A sustainable and innovative filling for Filipino Hopia made from jackfruit seeds.</p>
+             <a href="page3 hopia.html">  
+                  <button class="btn" onclick="openRecipe('hopia')">View Recipe</button>
+            </a>
+                </div>
+            </div>
+
+            <div class="recipe-card">
+                <div class="card-img" style="background-image: url('cucumber tea.jpg');"></div>
+                <div class="card-content">
+                    <span class="card-tag">LOCAL FARMER SUPPORT</span>
+                    <h3 class="card-title">Cucumber Milk Tea</h3>
+                 <p class="card-description">A refreshing beverage innovation supporting local farmers with fresh ingredients.</p>
+             <a href="page4 cucumbertea.html">
+                 <button class="btn" onclick="openRecipe('milktea')">View Recipe</button>
+            </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="recipeModal" class="modal-overlay" onclick="closeRecipe()">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close-btn" onclick="closeRecipe()">&times;</span>
+            <div id="modalBody">
+                </div>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Food Innovation Project - Cavite National High School
+    </footer>
+
+    <script>
+        // Data extracted from your images
+        const recipeData = {
+            papaya: {
+                title: "Nutri Papaya Chips",
+                ingredients: ["1 pc Unripe/Ripe Papaya", "1 cup Flour", "1.5 tsp Cornstarch", "2 tbsp Crispy Fry", "400ml Oil", "1/4 tsp Pepper", "1 tbsp Sour Cream Powder"],
+                procedure: ["Wash and clean papayas.", "Slice into thin pieces.", "Sun-dry slices.", "Mix dry ingredients in a bowl.", "Coat slices and fry until golden brown.", "Add flavoring and pack."]
+            },
+            hopia: {
+                title: "Jackfruit Seed Filled Hopia",
+                ingredients: ["250g Jackfruit seeds", "113g Vegetable oil", "110g Brown sugar", "125g Flour (1st Dough)", "57g Butter", "63g Flour (2nd Dough)"],
+                procedure: ["Boil jackfruit seeds until tender.", "Peel and blend into a powder.", "Sauté with sugar and vanilla to make filling.", "Prepare two types of dough and layer them.", "Fill dough with seed paste and bake for 15-20 mins."]
+            },
+            milktea: {
+                title: "Cucumber Milk Tea",
+                ingredients: ["1 Black tea bag", "1 Cucumber", "1/2 cup Water", "1 cup All-purpose cream", "1 cup Fresh milk", "1 tbsp Lemon juice", "2 tsp Sugar"],
+                procedure: ["Brew the black tea bag in hot water.", "Extract cucumber juice or blend until smooth.", "Combine tea, milk, and cream.", "Add lemon and sugar to taste.", "Serve chilled over ice."]
+            }
+        };
+
+        function openRecipe(id) {
+            const recipe = recipeData[id];
+            const modalBody = document.getElementById('modalBody');
+            
+            modalBody.innerHTML = `
+                <h2>${recipe.title}</h2>
+                <hr>
+                <h4>Ingredients:</h4>
+                <ul>${recipe.ingredients.map(i => <li>${i}</li>).join('')}</ul>
+                <h4>Procedures:</h4>
+                <ol>${recipe.procedure.map(p => <li>${p}</li>).join('')}</ol>
+            `;
+            
+            document.getElementById('recipeModal').style.display = 'flex';
+        }
+
+        function closeRecipe() {
+            document.getElementById('recipeModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
